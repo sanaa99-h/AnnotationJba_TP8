@@ -1,0 +1,23 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+
+
+    <bean id="idCtrl" class="presentation.ClientCONTROLLER" scope="prototype">
+    <property name="service" ref="s1" ></property>
+
+    </bean>
+    <bean id="s1" class="Service.ClientServiceIMPL">
+        <property name="dao" ref="d1"></property>
+
+    </bean>
+
+    <bean id="d1" class="dao.ClientDaoIMPL" scope="prototype">
+
+
+    </bean>
+
+
+</beans>
